@@ -1,0 +1,178 @@
+﻿<Window x:Class="LibraryManagement.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManagement"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignDarkBackground}"
+        Name="login"
+        ResizeMode="NoResize"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="700" Width="600">
+    <Grid>
+
+        <!--#region MATERIAL CARD -->
+        <materialDesign:Card 
+            Width="400"
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            materialDesign:ShadowAssist.ShadowEdges="Bottom,Right"
+            Padding="32" Margin="50">
+
+            <Grid>
+
+                <!--#region Row Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <!--#endregion Row Definitions -->
+
+                <Grid Grid.Row="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <ComboBox
+                            HorizontalAlignment="Right"
+                            materialDesign:HintAssist.Hint="Language">
+                            <ComboBoxItem>
+                                Vietnamese
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                English
+                            </ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <TextBlock FontSize="70" VerticalAlignment="Center" Margin="94,24,75,24.8" Foreground="#673AB7">
+                        LIMA
+                        </TextBlock>
+                    </Grid>
+
+                </Grid>
+
+                <!--#region USERNAME AND PASSWORD -->
+                <Grid Grid.Row="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--#region USERNAME -->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--#region ICON -->
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" 
+                                                     HorizontalAlignment="Center"
+                                                     Width="30" Height="30"
+                                                     Foreground="#673AB7"
+                                                     Margin="-1,24,3.4,3.6"/>
+                        </Grid>
+                        <!--#endregion ICON -->
+
+                        <!--#region TEXTBOX -->
+                        <Grid Grid.Column="1">
+                            <TextBox
+                            x:Name="Username"
+                            materialDesign:HintAssist.Hint="Username"
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                            VerticalAlignment="Center"/>
+                        </Grid>
+                        <!--#endregion TEXTBOX -->
+                    </Grid>
+                    <!--#endregion USERNAME -->
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="FormTextboxPassword" VerticalAlignment="Center" 
+                                                     HorizontalAlignment="Center"
+                                                     Width="28" Height="30"
+                                                     Foreground="#673AB7"
+                                                     Margin="-1,24,3.4,3.6"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <PasswordBox
+                        x:Name="PasswordBox"
+                        materialDesign:HintAssist.Hint="Password"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:HintAssist.HelperText="At least 8 characters"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                        VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+
+                    <!--#region REMEMBER ME -->
+                    <Grid Grid.Row="2" HorizontalAlignment="Left" Height="20" Margin="27,-20,0,0">
+                        <CheckBox
+                        Style="{StaticResource MaterialDesignCheckBox}"
+                        FontSize="10">
+                            Remember me
+                        </CheckBox>
+                    </Grid>
+                    <!--#endregion  REMEMBER ME -->
+
+                </Grid>
+                <!--#endregion USERNAME AND PASSWORD-->
+
+                <!--#region BUTTON LOGIN AND CHECKBOX-->
+                <Grid Grid.Row="2">
+                    <!--#region BUTTON LOGIN -->
+                    <Button
+                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            Height="50"
+                            materialDesign:ButtonAssist.CornerRadius="10"
+                            ToolTip="Login" 
+                            VerticalAlignment="Top" Margin="63,12,63,0">
+                        <TextBlock
+                                Text="Login" 
+                                FontSize="20"/>
+                    </Button>
+                    <!--#endregion BUTTON LOGIN -->
+
+                    <!--#region FORGOT PASSWORD HYPERLINK -->
+                    <TextBlock Margin="115,73,114,72.6" >
+                        <Hyperlink Foreground="#673AB7">
+                            Forgot password
+                        </Hyperlink>
+                    </TextBlock>
+                    <!--#endregion FORGOT PASSWORD HYPERLINK -->
+
+                    <TextBlock FontStyle="Italic"
+                               Foreground="Gray"
+                               Opacity="2" Margin="126,146,135,-2.4">
+                        Version 1.0.0
+                    </TextBlock>
+
+                </Grid>
+                <!--#endregion BUTTON LOGIN AND CHECKBOX-->
+
+            </Grid>
+        </materialDesign:Card>
+        <!--#endregion MATERIAL CARD -->
+    </Grid>
+</Window>
