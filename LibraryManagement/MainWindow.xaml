@@ -20,7 +20,7 @@
         Name="mainWindow"
         ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="Library Management" Height="600" Width="1000">
+        Title="Library Management" Height="800" Width="1200">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}"/>
@@ -109,7 +109,21 @@
                     <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}"></uc:ControlBarUC>
                 </Grid>
                 <Grid Grid.Row="1" Background="{DynamicResource MaterialDesignLightBackground}">
-                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <StackPanel Margin="10">
+                                
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
         </materialDesign:DrawerHost>
