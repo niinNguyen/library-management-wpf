@@ -1,7 +1,7 @@
 
 # Library Management
-___
-Simple Library Management System in WPF with Model-View-ViewModel Design Pattern
+
+Simple Library Management System in WPF with Model-View-ViewModel Design Pattern.
 
 ## Table of contents
 * [General Info](general-info)
@@ -12,6 +12,5 @@ Simple Library Management System in WPF with Model-View-ViewModel Design Pattern
 ***
 
 ### General info
-This project will 
-=======
-***Library Management in WPF ***
+This system 
+

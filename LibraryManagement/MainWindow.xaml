@@ -20,6 +20,7 @@
         Name="mainWindow"
         ResizeMode="NoResize"
         mc:Ignorable="d"
+        Icon="img/penguin (64).png"
         Title="Library Management" Height="800" Width="1200">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -62,7 +63,6 @@
                                 VerticalAlignment="Top"
                                 AcceptsReturn="True"
                                 TextWrapping="Wrap"
-                                VerticalScrollBarVisibility="Auto"
                                 materialDesign:HintAssist.Hint="Search"/>
                         </StackPanel>
                     </Grid>
@@ -92,9 +92,9 @@
                             LOG OUT
                         </Button>
                     </Grid>
-                    
+
                 </Grid>
-                
+
             </materialDesign:DrawerHost.LeftDrawerContent>
 
             <!-- Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
@@ -109,20 +109,68 @@
                     <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}"></uc:ControlBarUC>
                 </Grid>
                 <Grid Grid.Row="1" Background="{DynamicResource MaterialDesignLightBackground}">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
-                            <StackPanel Margin="10">
-                                
-                            </StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <materialDesign:Card
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                                Padding="20">
+                                <Grid>
+                                    <Label FontSize="20" Margin="10,12,1060,14">Welcome</Label>
+                                    <TextBlock FontSize="20" Margin="105,16,828,15" RenderTransformOrigin="0.391,0.276">UserName</TextBlock>
+                                    <ToggleButton
+                                          Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                                          ToolTip="MaterialDesignSwitchToggleButton with Content and ToggleButtonAssist.OnContent" Margin="1016,8,74,8">
+                                        <materialDesign:PackIcon
+                                            Kind="Lightbulb"
+                                            RenderTransformOrigin=".5,.5">
+                                            <materialDesign:PackIcon.RenderTransform>
+                                                <RotateTransform
+                                                    Angle="45" />
+                                            </materialDesign:PackIcon.RenderTransform>
+                                        </materialDesign:PackIcon>
+                                        <materialDesign:ToggleButtonAssist.OnContent>
+                                            <materialDesign:PackIcon
+                                                Kind="LightbulbCflOff" />
+                                        </materialDesign:ToggleButtonAssist.OnContent>
+                                    </ToggleButton>
+                                </Grid>
+
+                            </materialDesign:Card>
                         </Grid>
+
+                        <Grid Grid.Row="1">
+
+                            <Border 
+                                    CornerRadius="30"
+                                    Background="#673AB7"
+                                    HorizontalAlignment="Left" Height="185" 
+                                    Margin="80,75,0,0" VerticalAlignment="Top" Width="196">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="20" Opacity="0.5" ShadowDepth="10"/>
+                                </Border.Effect>
+                                <Image Source="img/penguin (256).png" Margin="11.2,7.2,9.2,13.6"></Image>
+                            </Border>
+                            <TextBlock Text="The Library Management System"
+                                       FontSize="50" Margin="291,88,132,462"
+                                       FontWeight="Bold"
+                                       />
+                            <Button
+                                Style="{StaticResource MaterialDesignFlatButton}"
+                                Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+                                CommandParameter="{x:Static Dock.Left}"
+                                ToolTip="MaterialDesignFlatButton" Margin="299,165,136,375" Height="Auto">
+                                <Grid Height="54" Width="712">
+                                    <materialDesign:PackIcon Kind="Explore" Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="225,11,457,13"/>
+                                    <TextBlock Text="LEARN MORE" FontSize="30" VerticalAlignment="Center" Margin="267,9,254,9"/>
+                                </Grid>
+                            </Button>
+                        </Grid>
+
                     </Grid>
                 </Grid>
             </Grid>
