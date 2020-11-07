@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Nguyen\source\repos\LibraryManagement\LibraryManagement\obj\Debug\
+C:\Users\Nguyen\source\repos\library-management-wpf\LibraryManagement\obj\Debug\
 LibraryManagement
 none
 false
 DEBUG;TRACE
-C:\Users\Nguyen\source\repos\LibraryManagement\LibraryManagement\App.xaml
-5236548160
+C:\Users\Nguyen\source\repos\library-management-wpf\LibraryManagement\App.xaml
+4-1047500051
 
-12-256618395
-23351042575
-AboutDialog.xaml;LimaUC\ControlBarUC.xaml;LoginWindow.xaml;MainWindow.xaml;ResourcesXAML\MainResource.xaml;
+11-1929936081
+23-1126725092
+LimaUC\ControlBarUC.xaml;LoginWindow.xaml;MainWindow.xaml;ResourcesXAML\MainResource.xaml;
 
-True
+False
 
